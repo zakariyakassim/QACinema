@@ -6,7 +6,7 @@ import com.qa.QACinema.Constants;
 import javax.persistence.*;
 
 @Entity
-@Table(name = Constants.order_table)
+@Table(name = Constants.film_table)
 public class Film {
 
 	@Id

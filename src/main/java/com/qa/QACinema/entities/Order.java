@@ -25,7 +25,6 @@ public class Order {
 
 	public Order(long accountId) {
 		this.accountId = accountId;
-		this.orderId = orderId;
 	}
 
 	public void setOrderId(long orderId) {
