@@ -1,8 +1,8 @@
 package com.qa.QACinema.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+
+import com.qa.QACinema.entities.Promotion;
+import com.qa.QACinema.repository.PromotionRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.qa.QACinema.entities.Promotion;
-import com.qa.QACinema.repository.PromotionRepository;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/api/promotion")
@@ -28,13 +28,13 @@ public class PromotionController {
 	@GetMapping
     @ResponseBody
     public List<Promotion> retrieveAllPromotion() {
-
+		System.out.println("clicked");
         return promotionRepository.findAll();
     }
 
     @PostMapping
     public Promotion addPromotion(@RequestBody Promotion promotion) {
-
+    	System.out.println("clicked");
         return promotionRepository.save(promotion);
     }
 

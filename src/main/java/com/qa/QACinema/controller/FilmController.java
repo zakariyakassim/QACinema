@@ -3,9 +3,7 @@ package com.qa.QACinema.controller;
 
 
 import com.qa.QACinema.entities.Film;
-import com.qa.QACinema.entities.Order;
 import com.qa.QACinema.repository.FilmRepository;
-import com.qa.QACinema.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

@@ -22,7 +22,7 @@ public class AccountController {
     @GetMapping
     @ResponseBody
     public List<Account> retrieveAllAccounts() {
-
+    	
         return accountRepository.findAll();
     }
 

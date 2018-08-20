@@ -17,14 +17,25 @@ public class Order {
 
 	@Column(name = Constants.account_id)
 	private long accountId;
-
+	
+	@Column(name = Constants.film_id)
+	private long filmId;
 
 	public Order(){
 
 	}
 
-	public Order(long accountId) {
+	public Order(long accountId, long filmId) {
 		this.accountId = accountId;
+		this.filmId = filmId;
+	}
+
+	public long getFilmId() {
+		return filmId;
+	}
+
+	public void setFilmId(long filmId) {
+		this.filmId = filmId;
 	}
 
 	public void setOrderId(long orderId) {

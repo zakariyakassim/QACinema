@@ -18,13 +18,13 @@ public class Promotion {
 	private long promotionId;
 
 	@Column(name = Constants.promotion_discount)
-	private double discount;
+	private String discount;
 
 	public Promotion() {
 		
 	}
 
-	public Promotion(double discount) {
+	public Promotion(String discount) {
 		this.discount = discount;
 	}
 
@@ -36,11 +36,11 @@ public class Promotion {
 		this.promotionId = promotionId;
 	}
 
-	public double isDiscount() {
+	public String isDiscount() {
 		return discount;
 	}
 
-	public void setDiscount(double discount) {
+	public void setDiscount(String discount) {
 		this.discount = discount;
 	}
 

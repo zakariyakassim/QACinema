@@ -15,16 +15,16 @@ public class Film {
 	private long filmId;
 
 	@Column(name = Constants.film_title)
-	private long title;
+	private String title;
 
 	@Column(name = Constants.film_description)
-	private long description;
+	private String description;
 
 	@Column(name = Constants.film_screenId)
 	private long screenId;
 
 	@Column(name = Constants.film_showtime)
-	private long showtime;
+	private String showtime;
 
 
 
@@ -32,7 +32,7 @@ public class Film {
 
 	}
 
-	public Film(long title, long description, long screenId, long showtime) {
+	public Film(String title, String description, long screenId, String showtime) {
 		this.title = title;
 		this.description = description;
 		this.screenId = screenId;
@@ -43,11 +43,11 @@ public class Film {
 		this.filmId = filmId;
 	}
 
-	public void setTitle(long title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 
-	public void setDescription(long description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 
@@ -55,7 +55,7 @@ public class Film {
 		this.screenId = screenId;
 	}
 
-	public void setShowtime(long showtime) {
+	public void setShowtime(String showtime) {
 		this.showtime = showtime;
 	}
 
@@ -63,11 +63,11 @@ public class Film {
 		return filmId;
 	}
 
-	public long getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
-	public long getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -75,7 +75,9 @@ public class Film {
 		return screenId;
 	}
 
-	public long getShowtime() {
+	public String getShowtime() {
 		return showtime;
 	}
+	
+	
 }

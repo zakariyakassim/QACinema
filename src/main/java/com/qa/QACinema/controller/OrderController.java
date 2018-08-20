@@ -28,14 +28,14 @@ public class OrderController {
     @ResponseBody
     public List<Order> retrieveAllOrders() {
 
-
+    	 System.out.println("its working 6");
         return orderRepository.findAll();
     }
 
     @PostMapping
     public Order addOrder(@RequestBody Order order) {
 
-
+    	 System.out.println("its working 4");
         return orderRepository.save(order);
 
 
