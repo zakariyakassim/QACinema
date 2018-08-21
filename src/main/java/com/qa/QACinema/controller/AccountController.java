@@ -26,7 +26,7 @@ public class AccountController {
         return accountRepository.findAll();
     }
 
-    @PostMapping()
+    @PostMapping(/account)
     public Account addAccount(@RequestBody Account account) {
 
         return accountRepository.save(account);
