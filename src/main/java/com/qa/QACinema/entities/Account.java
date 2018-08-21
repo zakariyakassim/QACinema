@@ -74,5 +74,14 @@ public class Account {
 		return email;
 	}
 
-
+	@Override
+	public String toString() {
+		return "Account{" +
+				"accountId=" + accountId +
+				", firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", email='" + email + '\'' +
+				", password='" + password + '\'' +
+				'}';
+	}
 }
