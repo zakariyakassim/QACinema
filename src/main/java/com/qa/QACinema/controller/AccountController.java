@@ -26,7 +26,7 @@ public class AccountController {
         return accountRepository.findAll();
     }
 
-    @PostMapping
+    @PostMapping()
     public Account addAccount(@RequestBody Account account) {
 
         return accountRepository.save(account);
@@ -52,7 +52,7 @@ public class AccountController {
     public void deleteAccount(@PathVariable Long id) {
 
         accountRepository.deleteById(id);
-
+ 
     }
 
 

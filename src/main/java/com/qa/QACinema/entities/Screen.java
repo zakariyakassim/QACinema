@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.qa.QACinema.Constants;
@@ -17,9 +18,11 @@ public class Screen {
 	@GeneratedValue
 	@Column(name = Constants.screen_id, unique = true)
 	private long screenId;
+    
 
 	@Column(name = Constants.seat_id)
 	private long seatId;
+	
 	
 	@Column(name = Constants.film_id)
 	private long filmId;
