@@ -1,6 +1,7 @@
 package com.qa.QACinema.controller;
 
 import com.qa.QACinema.entities.Account;
+import com.qa.QACinema.entities.Order;
 import com.qa.QACinema.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,8 +27,11 @@ public class AccountController {
         return accountRepository.findAll();
     }
 
-    @PostMapping(/account)
+
+    @PostMapping
     public Account addAccount(@RequestBody Account account) {
+
+        System.out.println(account);
 
         return accountRepository.save(account);
     }

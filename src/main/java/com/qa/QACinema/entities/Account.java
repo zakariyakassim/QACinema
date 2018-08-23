@@ -3,6 +3,7 @@ package com.qa.QACinema.entities;
 import com.qa.QACinema.Constants;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = Constants.account_table)
@@ -25,22 +26,12 @@ public class Account {
 	@Column(name = Constants.account_password)
 	private String password;
 
-
-
-
-	public Account() {
-	}
-
-	public Account(String firstName, String lastName, String email, String password) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.password = password;
-	}
-
-	public void setAccountId(long accountId) {
-		this.accountId = accountId;
-	}
+//	private List<Order> orders;
+//
+//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "account")
+//	public List<Order> getOrders(){
+//        return orders;
+//    }
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
@@ -58,7 +49,8 @@ public class Account {
 		this.password = password;
 	}
 
-	public long getAccountId() {
+
+    public long getAccountId() {
 		return accountId;
 	}
 
@@ -74,14 +66,4 @@ public class Account {
 		return email;
 	}
 
-	@Override
-	public String toString() {
-		return "Account{" +
-				"accountId=" + accountId +
-				", firstName='" + firstName + '\'' +
-				", lastName='" + lastName + '\'' +
-				", email='" + email + '\'' +
-				", password='" + password + '\'' +
-				'}';
-	}
 }
